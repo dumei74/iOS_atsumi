@@ -10,6 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var topPageView: UILabel!
+    
+    @IBOutlet var myImageView: UIView!
+//    {
+//        myImageView.image = UIImage(named: "ELFAKYUDSC06359_TP_V.jpg")
+//    }
+    
+    @IBOutlet weak var createNewFile: UIButton!
+    
+    @IBOutlet weak var indexFiles: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

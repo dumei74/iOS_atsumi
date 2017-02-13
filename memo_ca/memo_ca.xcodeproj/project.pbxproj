@@ -14,6 +14,7 @@
 		331D9B3A1E4D6B8E00857DB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 331D9B381E4D6B8E00857DB6 /* LaunchScreen.storyboard */; };
 		331D9B451E4D6B8E00857DB6 /* memo_caTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331D9B441E4D6B8E00857DB6 /* memo_caTests.swift */; };
 		331D9B501E4D6B8E00857DB6 /* memo_caUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331D9B4F1E4D6B8E00857DB6 /* memo_caUITests.swift */; };
+		3375FFC01E50595F005F4A1E /* ELFAKYUDSC06359_TP_V.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3375FFBF1E50595F005F4A1E /* ELFAKYUDSC06359_TP_V.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		331D9B4B1E4D6B8E00857DB6 /* memo_caUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = memo_caUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		331D9B4F1E4D6B8E00857DB6 /* memo_caUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memo_caUITests.swift; sourceTree = "<group>"; };
 		331D9B511E4D6B8E00857DB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3375FFBF1E50595F005F4A1E /* ELFAKYUDSC06359_TP_V.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ELFAKYUDSC06359_TP_V.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				331D9B311E4D6B8E00857DB6 /* ViewController.swift */,
 				331D9B331E4D6B8E00857DB6 /* Main.storyboard */,
 				331D9B361E4D6B8E00857DB6 /* Assets.xcassets */,
+				3375FFBF1E50595F005F4A1E /* ELFAKYUDSC06359_TP_V.jpg */,
 				331D9B381E4D6B8E00857DB6 /* LaunchScreen.storyboard */,
 				331D9B3B1E4D6B8E00857DB6 /* Info.plist */,
 			);
@@ -233,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				331D9B3A1E4D6B8E00857DB6 /* LaunchScreen.storyboard in Resources */,
+				3375FFC01E50595F005F4A1E /* ELFAKYUDSC06359_TP_V.jpg in Resources */,
 				331D9B371E4D6B8E00857DB6 /* Assets.xcassets in Resources */,
 				331D9B351E4D6B8E00857DB6 /* Main.storyboard in Resources */,
 			);
@@ -505,6 +509,7 @@
 				331D9B561E4D6B8E00857DB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		331D9B571E4D6B8E00857DB6 /* Build configuration list for PBXNativeTarget "memo_caTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +518,7 @@
 				331D9B591E4D6B8E00857DB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		331D9B5A1E4D6B8E00857DB6 /* Build configuration list for PBXNativeTarget "memo_caUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +527,7 @@
 				331D9B5C1E4D6B8E00857DB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
