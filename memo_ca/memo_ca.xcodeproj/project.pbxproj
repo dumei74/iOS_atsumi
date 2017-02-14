@@ -15,6 +15,7 @@
 		331D9B451E4D6B8E00857DB6 /* memo_caTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331D9B441E4D6B8E00857DB6 /* memo_caTests.swift */; };
 		331D9B501E4D6B8E00857DB6 /* memo_caUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331D9B4F1E4D6B8E00857DB6 /* memo_caUITests.swift */; };
 		3375FFC01E50595F005F4A1E /* ELFAKYUDSC06359_TP_V.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3375FFBF1E50595F005F4A1E /* ELFAKYUDSC06359_TP_V.jpg */; };
+		339613B41E52B0BE000F23A6 /* fileBoxCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339613B31E52B0BE000F23A6 /* fileBoxCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		331D9B4F1E4D6B8E00857DB6 /* memo_caUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memo_caUITests.swift; sourceTree = "<group>"; };
 		331D9B511E4D6B8E00857DB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3375FFBF1E50595F005F4A1E /* ELFAKYUDSC06359_TP_V.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ELFAKYUDSC06359_TP_V.jpg; sourceTree = "<group>"; };
+		339613B31E52B0BE000F23A6 /* fileBoxCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fileBoxCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				331D9B2F1E4D6B8E00857DB6 /* AppDelegate.swift */,
 				331D9B311E4D6B8E00857DB6 /* ViewController.swift */,
+				339613B31E52B0BE000F23A6 /* fileBoxCollectionViewCell.swift */,
 				331D9B331E4D6B8E00857DB6 /* Main.storyboard */,
 				331D9B361E4D6B8E00857DB6 /* Assets.xcassets */,
 				3375FFBF1E50595F005F4A1E /* ELFAKYUDSC06359_TP_V.jpg */,
@@ -264,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				331D9B321E4D6B8E00857DB6 /* ViewController.swift in Sources */,
+				339613B41E52B0BE000F23A6 /* fileBoxCollectionViewCell.swift in Sources */,
 				331D9B301E4D6B8E00857DB6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
