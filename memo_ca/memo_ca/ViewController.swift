@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
@@ -20,10 +21,47 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     @IBOutlet weak var createNewFile: UIButton!
     
     @IBOutlet weak var indexFiles: UITableView!
+    
+    var fileList:[String] = NSArray() as! [String]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // +newFile読み込み
+        read()
     }
     
+    // 本データ処理
+    func read(){
+        let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        // エンティティを操作するためのオブジェクトを作成
+        let viewContent = appDelegate.persistentContainer.viewContext
+        // どのエンティティからdataを取得してくるか設定
+        let query: NSFetchRequest<Index> = Index.fetchRequest()
+        do {
+            // データの一括取得
+            let fetchResults = try viewContent.fetch(query)
+            
+            // 一旦配列を空（初期化）にする
+            fileList = NSArray() as! [String]
+            // データの取得
+            for result: AnyObject in fetchResults {
+                let title: String? = result.value(forKey: "title") as? String
+                let saveData: Date? = result.value(forKey: "saveData") as? Date
+                
+                print("title:\(title) saveDate:\(saveData)")
+                
+                fileList.append(title!)
+            }
+        } catch {
+        }
+        
+        // TableViewの再描画
+        indexFiles.reloadData()
+    }
+    
+    
+    // 仮データproArray読み込み。
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return proArray.count
     }
