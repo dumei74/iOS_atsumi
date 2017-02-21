@@ -17,8 +17,14 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
 //    {
 //        myImageView.image = UIImage(named: "ELFAKYUDSC06359_TP_V.jpg")
 //    }
-    
+
     @IBOutlet weak var createNewFile: UIButton!
+
+    
+    @IBOutlet weak var shareButton: UIButton!
+    
+    @IBOutlet weak var deleteButton: UIButton!
+    
     
     @IBOutlet weak var indexFiles: UITableView!
     

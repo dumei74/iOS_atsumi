@@ -9,5 +9,13 @@
 import UIKit
 
 class fileBoxCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var transitionTop: UIBarButtonItem!
+    
+    @IBOutlet weak var newCard: UIButton!
+    
+    @IBOutlet weak var cardIndex: UITableView!
+    
+    
+    @IBOutlet weak var commentIndex: UITableView!
     
 }
