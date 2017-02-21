@@ -19,6 +19,9 @@
 		33DB1AAC1E5BC95F00292D23 /* memo-ca.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 33DB1AAA1E5BC95E00292D23 /* memo-ca.xcdatamodeld */; };
 		33DB1AAF1E5BCACB00292D23 /* Index+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DB1AAD1E5BCACB00292D23 /* Index+CoreDataClass.swift */; };
 		33DB1AB01E5BCACB00292D23 /* Index+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DB1AAE1E5BCACB00292D23 /* Index+CoreDataProperties.swift */; };
+		33DB1AB21E5BD34A00292D23 /* cardPageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DB1AB11E5BD34A00292D23 /* cardPageCollectionViewCell.swift */; };
+		33DB1AB41E5BD36100292D23 /* quizCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DB1AB31E5BD36100292D23 /* quizCollectionViewCell.swift */; };
+		33DB1AF01E5BEBA600292D23 /* cardPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DB1AEF1E5BEBA600292D23 /* cardPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		33DB1AAB1E5BC95E00292D23 /* memo-ca.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "memo-ca.xcdatamodel"; sourceTree = "<group>"; };
 		33DB1AAD1E5BCACB00292D23 /* Index+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Index+CoreDataClass.swift"; sourceTree = "<group>"; };
 		33DB1AAE1E5BCACB00292D23 /* Index+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Index+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		33DB1AB11E5BD34A00292D23 /* cardPageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cardPageCollectionViewCell.swift; sourceTree = "<group>"; };
+		33DB1AB31E5BD36100292D23 /* quizCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = quizCollectionViewCell.swift; sourceTree = "<group>"; };
+		33DB1AEF1E5BEBA600292D23 /* cardPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cardPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,12 +118,15 @@
 				331D9B2F1E4D6B8E00857DB6 /* AppDelegate.swift */,
 				331D9B311E4D6B8E00857DB6 /* ViewController.swift */,
 				339613B31E52B0BE000F23A6 /* fileBoxCollectionViewCell.swift */,
+				33DB1AB11E5BD34A00292D23 /* cardPageCollectionViewCell.swift */,
+				33DB1AB31E5BD36100292D23 /* quizCollectionViewCell.swift */,
 				331D9B331E4D6B8E00857DB6 /* Main.storyboard */,
 				331D9B361E4D6B8E00857DB6 /* Assets.xcassets */,
 				3375FFBF1E50595F005F4A1E /* ELFAKYUDSC06359_TP_V.jpg */,
 				331D9B381E4D6B8E00857DB6 /* LaunchScreen.storyboard */,
 				331D9B3B1E4D6B8E00857DB6 /* Info.plist */,
 				33DB1AAA1E5BC95E00292D23 /* memo-ca.xcdatamodeld */,
+				33DB1AEF1E5BEBA600292D23 /* cardPageViewController.swift */,
 			);
 			path = memo_ca;
 			sourceTree = "<group>";
@@ -275,12 +284,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33DB1AB21E5BD34A00292D23 /* cardPageCollectionViewCell.swift in Sources */,
 				33DB1AAF1E5BCACB00292D23 /* Index+CoreDataClass.swift in Sources */,
 				331D9B321E4D6B8E00857DB6 /* ViewController.swift in Sources */,
 				339613B41E52B0BE000F23A6 /* fileBoxCollectionViewCell.swift in Sources */,
 				33DB1AB01E5BCACB00292D23 /* Index+CoreDataProperties.swift in Sources */,
+				33DB1AF01E5BEBA600292D23 /* cardPageViewController.swift in Sources */,
 				331D9B301E4D6B8E00857DB6 /* AppDelegate.swift in Sources */,
 				33DB1AAC1E5BC95F00292D23 /* memo-ca.xcdatamodeld in Sources */,
+				33DB1AB41E5BD36100292D23 /* quizCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

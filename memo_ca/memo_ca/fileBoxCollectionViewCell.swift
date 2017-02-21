@@ -8,7 +8,7 @@
 
 import UIKit
 
-class fileBoxCollectionViewCell: UICollectionViewCell {
+class fileBoxCollectionViewCell: UITableViewCell {
     @IBOutlet weak var transitionTop: UIBarButtonItem!
     
     @IBOutlet weak var newCard: UIButton!
