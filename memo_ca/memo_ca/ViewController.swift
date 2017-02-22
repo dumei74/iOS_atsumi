@@ -20,11 +20,8 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
 
     @IBOutlet weak var createNewFile: UIButton!
 
-    
-    @IBOutlet weak var shareButton: UIButton!
-    
-    @IBOutlet weak var deleteButton: UIButton!
-    
+    @IBOutlet weak var newFileName: UITextField!
+    // var newFileName:[String] = NSArray() as! [String]
     
     @IBOutlet weak var indexFiles: UITableView!
     
@@ -37,6 +34,24 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         read()
     }
     
+    
+    // newFileボタン押した時発動
+    @IBAction func newFileName(_ sender: UIButton) {
+        let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        // エンティティを操作するためのオブジェクトを作成
+        let viewContent = appDelegate.persistentContainer.viewContext
+        let Index = NSEntityDescription.entity(forEntityName: "Index", in: viewContent)
+        let newRecord = NSManagedObject(entity: Index!, insertInto: viewContent)
+
+        newRecord.setValue(newFileName.text, forKey: "fileName")
+        do {
+            try viewContent.save()
+        } catch {
+        }
+}
+    
+
+
     // 本データ処理
     func read(){
         let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -52,12 +67,10 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             fileList = NSArray() as! [String]
             // データの取得
             for result: AnyObject in fetchResults {
-                let title: String? = result.value(forKey: "title") as? String
-                let saveData: Date? = result.value(forKey: "saveData") as? Date
+                let title: String? = result.value(forKey: "fileName") as? String
+                //print("newFileName:\(newFileName) Index:\(Index)().self()")
                 
-                print("title:\(title) saveDate:\(saveData)")
-                
-                fileList.append(title!)
+                fileList.append(newFileName!.text!)
             }
         } catch {
         }
@@ -69,14 +82,14 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     // 仮データproArray読み込み。
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return proArray.count
+        return fileList.count
     }
     
-    var proArray = ["1","2","3","4"]
+//    var proArray = ["1","2","3","4"]
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = proArray[indexPath.row]
+        cell.textLabel?.text = fileList[indexPath.row]
         return cell
     }
     

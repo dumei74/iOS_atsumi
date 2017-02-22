@@ -53,7 +53,7 @@
                                                     <state key="normal" title="Share"/>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fa-f7-Z2j">
-                                                    <rect key="frame" x="135" y="5" width="32" height="30"/>
+                                                    <rect key="frame" x="135" y="4" width="32" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Quiz"/>
                                                     <connections>
@@ -62,6 +62,11 @@
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="deleteBtn" destination="DY5-Qw-o1F" id="EAy-f0-mJJ"/>
+                                            <outlet property="quizBtn" destination="9fa-f7-Z2j" id="6q3-uy-c4Y"/>
+                                            <outlet property="shareBtn" destination="Haw-gw-Qsr" id="bdM-eB-vLd"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -70,10 +75,11 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="htu-3L-k4W">
-                                <rect key="frame" x="130" y="113" width="114" height="30"/>
+                                <rect key="frame" x="36" y="130" width="114" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="+ create new file"/>
                                 <connections>
+                                    <action selector="newFileName:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HbR-ww-kLB"/>
                                     <segue destination="j7d-ir-NxE" kind="show" id="hd3-e1-1qG"/>
                                 </connections>
                             </button>
@@ -84,8 +90,15 @@
                                     <navigationItem title="Top" id="TQm-r9-VF5"/>
                                 </items>
                             </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hCE-1u-TYu">
+                                <rect key="frame" x="193" y="131" width="146" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="memo-ca" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mdn-aS-4ZI">
-                                <rect key="frame" x="150" y="66" width="74" height="21"/>
+                                <rect key="frame" x="150" y="85" width="74" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -108,6 +121,7 @@
                         <outlet property="createNewFile" destination="htu-3L-k4W" id="Df4-Lz-jAj"/>
                         <outlet property="indexFiles" destination="OQ4-hE-b9Q" id="8Xo-fh-c6X"/>
                         <outlet property="myImageView" destination="8bC-Xf-vdC" id="PpB-5p-4R7"/>
+                        <outlet property="newFileName" destination="hCE-1u-TYu" id="iom-Rf-Eu5"/>
                         <outlet property="topPageView" destination="Mdn-aS-4ZI" id="nKW-5a-UXs"/>
                     </connections>
                 </viewController>
@@ -123,7 +137,7 @@
                         <viewControllerLayoutGuide type="top" id="z78-Vl-Ihh"/>
                         <viewControllerLayoutGuide type="bottom" id="6vC-VG-wnV"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Ul8-ma-RbP">
+                    <view key="view" contentMode="scaleToFill" id="Ul8-ma-RbP" customClass="cardPageCollectionViewCell" customModule="memo_ca">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -175,14 +189,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHI-su-Nge">
-                                <rect key="frame" x="312" y="44" width="47" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="File 00"/>
-                                <connections>
-                                    <segue destination="j7d-ir-NxE" kind="presentation" id="4IV-BA-ew1"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tko-cm-6ss">
                                 <rect key="frame" x="171" y="578" width="32" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -195,13 +201,44 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2qD-u9-XSm">
+                                <rect key="frame" x="16" y="73" width="343" height="249"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ufh-UJ-X1N">
+                                <rect key="frame" x="15" y="334" width="343" height="249"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="File 00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLK-uT-D1I">
+                                <rect key="frame" x="323" y="64" width="52" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="backBtn" destination="EQ0-8q-0Zl" id="RgC-md-4MB"/>
+                            <outlet property="backTxt" destination="Ufh-UJ-X1N" id="Yix-ra-Cng"/>
+                            <outlet property="fileName" destination="rLK-uT-D1I" id="xEh-a0-9ln"/>
+                            <outlet property="frontTxt" destination="2qD-u9-XSm" id="8sT-eF-ovN"/>
+                            <outlet property="hideBtn" destination="Tko-cm-6ss" id="Nss-4a-h8M"/>
+                            <outlet property="nextBtn" destination="eNX-XA-iKZ" id="pAD-lg-k1n"/>
+                        </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o4Z-ft-GvX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-351.19999999999999" y="856.82158920539734"/>
+            <point key="canvasLocation" x="1364" y="870"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="8Ba-OF-rgv">
@@ -211,7 +248,7 @@
                         <viewControllerLayoutGuide type="top" id="20o-PG-JkF"/>
                         <viewControllerLayoutGuide type="bottom" id="FJI-EJ-pna"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ML2-Ny-FjG" customClass="quizCollectionViewCell" customModule="memo_ca" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="ML2-Ny-FjG" customClass="quizCollectionViewCell" customModule="memo_ca">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -272,11 +309,20 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="answerPersent" destination="1Wh-Ek-OL7" id="Pwn-2F-6Xx"/>
+                            <outlet property="backView1" destination="cwb-i6-7iz" id="VZa-4r-0rh"/>
+                            <outlet property="backView2" destination="Q8n-jb-fG4" id="2ny-Op-xE3"/>
+                            <outlet property="backView3" destination="aQ0-SO-EBQ" id="Tmu-Zf-x8X"/>
+                            <outlet property="backView4" destination="iYB-Xz-u4T" id="Kyy-9G-zv9"/>
+                            <outlet property="frontView" destination="GrP-z4-IvQ" id="r37-rU-rsA"/>
+                            <outlet property="nextBtn" destination="CLU-yx-z1I" id="b31-Xi-JGL"/>
+                        </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Up-qh-rcm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="689" y="838"/>
+            <point key="canvasLocation" x="588" y="889"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="MzJ-0p-xAt">
@@ -306,9 +352,6 @@
                                                     <rect key="frame" x="248" y="6" width="30" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Edit"/>
-                                                    <connections>
-                                                        <segue destination="m7o-ZQ-fLp" kind="presentation" id="Y7V-ds-B2y"/>
-                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HxX-RX-1Cx">
                                                     <rect key="frame" x="286" y="6" width="45" height="30"/>
@@ -319,9 +362,6 @@
                                                     <rect key="frame" x="210" y="6" width="30" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="See"/>
-                                                    <connections>
-                                                        <segue destination="m7o-ZQ-fLp" kind="presentation" id="QZC-K8-JmJ"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -349,9 +389,6 @@
                                                     <rect key="frame" x="252" y="5" width="30" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Edit"/>
-                                                    <connections>
-                                                        <segue destination="m7o-ZQ-fLp" kind="presentation" id="bbT-1z-0pv"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -362,9 +399,6 @@
                                 <rect key="frame" x="16" y="56" width="77" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="+ new card"/>
-                                <connections>
-                                    <segue destination="m7o-ZQ-fLp" kind="show" id="8dG-Ri-QEQ"/>
-                                </connections>
                             </button>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fih-gB-Tg5">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
@@ -384,12 +418,6 @@
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <connections>
-                            <outlet property="cardIndex" destination="2D2-s4-grD" id="PNG-se-PgN"/>
-                            <outlet property="commentIndex" destination="cTO-kC-0kH" id="T6j-iM-uAn"/>
-                            <outlet property="newCard" destination="c6c-yF-GGU" id="6rL-ng-Gw5"/>
-                            <outlet property="transitionTop" destination="cZv-gu-1z0" id="0Bm-sc-ZQx"/>
-                        </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X7t-O0-tq5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -418,8 +446,4 @@
     <resources>
         <image name="ELFAKYUDSC06359_TP_V.jpg" width="1600" height="1066"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="hd3-e1-1qG"/>
-        <segue reference="8dG-Ri-QEQ"/>
-    </inferredMetricsTieBreakers>
 </document>
