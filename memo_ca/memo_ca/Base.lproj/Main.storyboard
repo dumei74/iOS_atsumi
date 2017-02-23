@@ -57,13 +57,21 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Quiz"/>
                                                     <connections>
-                                                        <segue destination="Vd2-aX-2si" kind="presentation" id="SZp-FO-RxP"/>
+                                                        <segue destination="Vd2-aX-2si" kind="presentation" id="3rd-8P-FSJ"/>
                                                     </connections>
                                                 </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0r-KG-cbA">
+                                                    <rect key="frame" x="20" y="10" width="98" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="deleteBtn" destination="DY5-Qw-o1F" id="EAy-f0-mJJ"/>
+                                            <outlet property="fileName" destination="X0r-KG-cbA" id="1St-kE-rqI"/>
                                             <outlet property="quizBtn" destination="9fa-f7-Z2j" id="6q3-uy-c4Y"/>
                                             <outlet property="shareBtn" destination="Haw-gw-Qsr" id="bdM-eB-vLd"/>
                                         </connections>
@@ -80,7 +88,6 @@
                                 <state key="normal" title="+ create new file"/>
                                 <connections>
                                     <action selector="newFileName:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HbR-ww-kLB"/>
-                                    <segue destination="j7d-ir-NxE" kind="show" id="hd3-e1-1qG"/>
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mqZ-Eh-zjW">
@@ -240,10 +247,10 @@
             </objects>
             <point key="canvasLocation" x="1364" y="870"/>
         </scene>
-        <!--View Controller-->
+        <!--Quiz View Controller-->
         <scene sceneID="8Ba-OF-rgv">
             <objects>
-                <viewController id="Vd2-aX-2si" sceneMemberID="viewController">
+                <viewController id="Vd2-aX-2si" customClass="quizViewController" customModule="memo_ca" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="20o-PG-JkF"/>
                         <viewControllerLayoutGuide type="bottom" id="FJI-EJ-pna"/>
@@ -309,15 +316,6 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <connections>
-                            <outlet property="answerPersent" destination="1Wh-Ek-OL7" id="Pwn-2F-6Xx"/>
-                            <outlet property="backView1" destination="cwb-i6-7iz" id="VZa-4r-0rh"/>
-                            <outlet property="backView2" destination="Q8n-jb-fG4" id="2ny-Op-xE3"/>
-                            <outlet property="backView3" destination="aQ0-SO-EBQ" id="Tmu-Zf-x8X"/>
-                            <outlet property="backView4" destination="iYB-Xz-u4T" id="Kyy-9G-zv9"/>
-                            <outlet property="frontView" destination="GrP-z4-IvQ" id="r37-rU-rsA"/>
-                            <outlet property="nextBtn" destination="CLU-yx-z1I" id="b31-Xi-JGL"/>
-                        </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Up-qh-rcm" userLabel="First Responder" sceneMemberID="firstResponder"/>

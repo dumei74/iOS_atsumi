@@ -27,6 +27,8 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     var fileList:[String] = NSArray() as! [String]
     
+    @IBOutlet weak var fileName: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,6 +50,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             try viewContent.save()
         } catch {
         }
+        read()
 }
     
 
@@ -70,7 +73,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
                 let title: String? = result.value(forKey: "fileName") as? String
                 //print("newFileName:\(newFileName) Index:\(Index)().self()")
                 
-                fileList.append(newFileName!.text!)
+                fileList.append(title!)
             }
         } catch {
         }
@@ -88,8 +91,13 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
 //    var proArray = ["1","2","3","4"]
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = fileList[indexPath.row]
+        
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)as! fileBoxCollectionViewCell
+        
+//        cell.textLabel?.text = fileList[indexPath.row]
+        
+        cell.fileName.text = fileList[indexPath.row]
         return cell
     }
     

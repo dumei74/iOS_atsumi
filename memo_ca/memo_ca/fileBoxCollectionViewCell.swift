@@ -12,4 +12,6 @@ class fileBoxCollectionViewCell: UITableViewCell {
     @IBOutlet weak var quizBtn: UIButton!
     @IBOutlet weak var shareBtn: UIButton!
     @IBOutlet weak var deleteBtn: UIButton!
+    @IBOutlet weak var fileName: UILabel!
+    
 }
