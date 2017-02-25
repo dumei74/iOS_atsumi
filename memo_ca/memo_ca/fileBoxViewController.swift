@@ -1,22 +1,19 @@
 //
-//  cardPageViewController.swift
+//  fileBoxViewController.swift
 //  memo_ca
 //
-//  Created by 石井篤美 on 2017/02/21.
+//  Created by 石井篤美 on 2017/02/23.
 //  Copyright © 2017年 石井篤美. All rights reserved.
 //
 
 import UIKit
-import CoreData
 
-class cardPageViewController: UIViewController {
+class fileBoxViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-    }
-    @IBAction func tapSave(_ sender: UIButton) {
     }
 
     override func didReceiveMemoryWarning() {
