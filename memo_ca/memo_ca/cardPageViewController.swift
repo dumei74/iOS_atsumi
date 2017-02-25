@@ -10,18 +10,25 @@ import UIKit
 import CoreData
 
 class cardPageViewController: UIViewController {
+    
+    
+
+    
+    
+    
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
+
     @IBAction func tapSave(_ sender: UIButton) {
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 
