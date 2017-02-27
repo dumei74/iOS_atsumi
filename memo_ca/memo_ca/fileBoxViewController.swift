@@ -19,7 +19,7 @@ class fileBoxViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Coreデータからの読み込み
+        // +new cardの読み込み
         read()
     }
     

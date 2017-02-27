@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Social
 
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
@@ -34,6 +35,23 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         
         // +newFile読み込み
         read()
+        
+        // キーボードの上にcloseボタンを配置
+        // ビューを作成
+        let upView = UIView()
+        upView.frame.size.height = 60   // 高さを設定
+        upView.backgroundColor = UIColor.lightGray
+        
+        // closeボタンを作成
+        let closeButton = UIButton(frame: CGRect(x: self.view.bounds.width - 70, y: 0, width: 70, height: 50))
+        closeButton.setTitle("close", for: .normal)
+        
+        // closeボタンにイベントを設定
+//        closeButton.addTarget(self, action: #selector(closekeyboad(sender:)), for: .touchUpInside)
+        
+        // ビューに閉じるボタンを追加
+        upView.addSubview(closeButton)
+
     }
     
     

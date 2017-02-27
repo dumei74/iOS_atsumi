@@ -11,17 +11,17 @@ import UIKit
 
 
 class cardPageCollectionViewCell: UITableViewCell {
-    
-    @IBOutlet weak var fileName: UILabel!
-    
-    @IBOutlet weak var front: UITextView!
-    @IBOutlet weak var back: UITextView!
 
-    @IBOutlet weak var saveAdd: UIButton!
-    @IBOutlet weak var commentCheck: UISwitch!
+    @IBOutlet weak var seeBtn: UIButton!
     
     
-    @IBOutlet weak var nextBtn: UIButton!
-    @IBOutlet weak var backBtn: UIButton!
-    @IBOutlet weak var hideBtn: UIButton!
+//    @IBOutlet weak var fileName: UILabel!
+//    
+//    @IBOutlet weak var front: UITextView!
+//    @IBOutlet weak var back: UITextView!
+//
+//    @IBOutlet weak var saveAdd: UIButton!
+//    @IBOutlet weak var commentCheck: UISwitch!
+    
+    
 }
