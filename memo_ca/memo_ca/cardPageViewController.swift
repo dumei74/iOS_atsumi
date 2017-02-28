@@ -11,14 +11,32 @@ import CoreData
 
 class cardPageViewController: UIViewController {
     
+    @IBOutlet var cardPageView: cardPageCollectionViewCell!
+    
+    
     // カード表示
     @IBOutlet weak var fileName: UILabel!
+    
+    @IBOutlet weak var saveBtn: UIButton!
+    @IBOutlet weak var commentCheck: UISwitch!
+    
+    
+    @IBOutlet weak var frontTxt: UITextView!
+    @IBOutlet weak var backTxt: UITextView!
+    
     @IBOutlet weak var frontView: UIImageView!
+    @IBOutlet weak var backView: UIImageView!
+    
+    
+    
     @IBOutlet weak var nextBtn: UIButton!
     @IBOutlet weak var hideBtn: UIButton!
     @IBOutlet weak var backBtn: UIButton!
 
+    
+    
 
+    
     // closeボタン
     
     
@@ -36,17 +54,53 @@ class cardPageViewController: UIViewController {
         closeButton.setTitle("close", for: .normal)
         
         // closeボタンにイベントを設定
-//        closeButton.addTarget(self, action: #selector(closekeyboad(sender:)), for: .touchUpInside)
-//        
+        closeButton.addTarget(self, action: #selector(closekeyboad(sender:)), for: .touchUpInside)
+        
         // ビューに閉じるボタンを追加
         upView.addSubview(closeButton)
+        
+        // キーボードのアクセサリービューを設定する
+        frontTxt.inputAccessoryView = upView
+        backTxt.inputAccessoryView = upView
+            
+        
+    }
+    
+    
+    // キーボードを閉じる
+    func closekeyboad(sender: UIButton){
+        frontTxt.resignFirstResponder()
+        backTxt.resignFirstResponder()
+        
+        
+        // 画面を元に戻す
+        UIView.animate(withDuration: 0.2, animations: {() -> Void in
+            self.cardPageView.frame.origin = CGPoint(x: self.cardPageView.frame.origin.x,y: self.cardPageView.frame.origin.y + 250)
+        }, completion: {finished in
+        })
     }
 
+
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
 
+//    // backTxtにカーソルが当たったとき（入力開始）Sample EditView
+//    func backViewShouldBeginEditing(_ backView: UITextView) -> Bool {
+//        // フォーム全体を上に移動する
+//        UIView.animate(withDuration: 0.2, animations: {() -> Void in
+//            self.cardPageView.frame.origin = CGPoint(x: self.view.frame.origin.x,y: self.view.frame.origin.y - 250)
+//        }, completion: {finished in print("FormViewが上に移動しました")})
+//        
+//        // キーボードを表示
+//        return true
+//    }
+
+    
+    
     /*
     // MARK: - Navigation
 
