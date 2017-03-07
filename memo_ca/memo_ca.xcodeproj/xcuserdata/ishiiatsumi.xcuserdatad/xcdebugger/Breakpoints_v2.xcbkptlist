@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "memo_ca/ViewController.swift"
-            timestampString = "509897446.272359"
+            timestampString = "510550182.539877"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
             landmarkName = "read()"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "memo_ca/fileBoxViewController.swift"
-            timestampString = "509718382.166092"
+            timestampString = "510543621.542639"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "tapDelete(_:)"
             landmarkType = "7">
          </BreakpointContent>

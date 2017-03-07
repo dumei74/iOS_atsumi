@@ -27,6 +27,34 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     @IBOutlet weak var indexFiles: UITableView!
     
     var fileList:[String] = NSArray() as! [String]
+    var selectedIndex = ""
+    
+    // TableView行数指定
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int)-> Int{
+        // DBの名前
+        return fileList.count
+    }
+    
+    // 選択時に発動
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // 選択行を他メンバで使用するためにメンバ変数に保存
+        selectedIndex = fileList[indexPath.row]
+        performSegue(withIdentifier: "showSecondView", sender: nil)
+    }
+    
+    // Segueで画面遷移時発動
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // 次の画面のオブジェクトを作成
+        let secondVC = segue.destination as! fileBoxViewController
+        // 選択された行番号を次の画面のプロパティに保存
+        secondVC.scSelectedIndex = selectedIndex
+        print("番号\(secondVC.scSelectedIndex)を次の画面へ渡す。")
+    }
+
+    
+    
+    
+    
     
     @IBOutlet weak var fileName: UILabel!
     
@@ -101,10 +129,10 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     
     
-    // 仮データproArray読み込み。
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return fileList.count
-    }
+//    // 仮データproArray読み込み。
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return fileList.count
+//    }
     
 //    var proArray = ["1","2","3","4"]
     

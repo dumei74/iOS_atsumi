@@ -39,7 +39,7 @@
                                         <rect key="frame" x="0.0" y="28" width="303" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zx4-yo-ltc" id="VJr-nc-Gny">
-                                            <rect key="frame" x="0.0" y="0.0" width="303" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="303" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DY5-Qw-o1F">
@@ -68,7 +68,6 @@
                                             <outlet property="deleteBtn" destination="DY5-Qw-o1F" id="EAy-f0-mJJ"/>
                                             <outlet property="fileName" destination="X0r-KG-cbA" id="1St-kE-rqI"/>
                                             <outlet property="quizBtn" destination="9fa-f7-Z2j" id="6q3-uy-c4Y"/>
-                                            <segue destination="j7d-ir-NxE" kind="show" id="6xZ-yL-Z4n"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -147,6 +146,7 @@
                         <outlet property="myImageView" destination="8bC-Xf-vdC" id="PpB-5p-4R7"/>
                         <outlet property="newFileName" destination="hCE-1u-TYu" id="iom-Rf-Eu5"/>
                         <outlet property="topPageView" destination="Mdn-aS-4ZI" id="nKW-5a-UXs"/>
+                        <segue destination="j7d-ir-NxE" kind="show" identifier="showSecondView" id="yf8-WU-crR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -447,7 +447,7 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zcz-9q-0aH" id="FWg-e8-7qw">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="okB-dC-1bg">
@@ -500,7 +500,7 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eLx-lD-Ubi" id="R96-da-6Qm">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfo-zs-JrD">
@@ -585,6 +585,7 @@
                     <connections>
                         <outlet property="cardCIndex" destination="cTO-kC-0kH" id="dS4-Ec-zLx"/>
                         <outlet property="cardIndex" destination="2D2-s4-grD" id="XZZ-ns-aKj"/>
+                        <outlet property="fileName" destination="6os-t9-XUR" id="r3m-dX-Jyv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X7t-O0-tq5" userLabel="First Responder" sceneMemberID="firstResponder"/>

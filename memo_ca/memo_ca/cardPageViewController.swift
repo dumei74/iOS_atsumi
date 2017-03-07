@@ -34,7 +34,7 @@ class cardPageViewController: UIViewController {
     @IBOutlet weak var backBtn: UIButton!
 
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

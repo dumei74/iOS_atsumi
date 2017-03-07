@@ -10,7 +10,10 @@ import UIKit
 import CoreData
 
 class fileBoxViewController: UIViewController {
+    
+    var scSelectedIndex = ""
 
+    @IBOutlet weak var fileName: UILabel!
     @IBOutlet weak var cardIndex: UITableView!
     @IBOutlet weak var cardCIndex: UITableView!
     
@@ -19,6 +22,11 @@ class fileBoxViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        if scSelectedIndex != ""{
+            fileName.text = scSelectedIndex
+        }
+        
         // +new cardの読み込み
         read()
     }
