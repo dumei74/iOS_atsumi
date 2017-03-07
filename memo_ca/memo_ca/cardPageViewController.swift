@@ -34,14 +34,11 @@ class cardPageViewController: UIViewController {
     @IBOutlet weak var backBtn: UIButton!
 
     
-    
 
-    
-    // closeボタン
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print (Bundle.main)
         
         // キーボードの上にcloseボタンを配置
         // ビューを作成
@@ -80,13 +77,35 @@ class cardPageViewController: UIViewController {
         })
     }
 
+    @IBAction func tapSave(_ sender: UIButton) {
+        // AppDeligateを使う用意をしておく
+        let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        // エンティティを操作するためのオブジェクトを作成
+        let viewContext = appDelegate.persistentContainer.viewContext
+        
+        // エンティティオブジェクトの作成
+        let Index = NSEntityDescription.entity(forEntityName: "Index", in: viewContext)
+        
+        // ToDoエンティティにレコード（行）を挿入するためのオブジェクトを作成。
+        let newRecord = NSManagedObject(entity: Index!, insertInto: viewContext)
+        
+        // 値のセット
+        newRecord.setValue(frontTxt.text, forKey: "front") // 値を代入
+        newRecord.setValue(backTxt.text, forKey: "back")  // 値を代入
+        do {
+            // レコード（行）の即時保存
+            try viewContext.save()
+        } catch {
+        }
+//        read()
+    }
 
-    
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
+
 
 //    // backTxtにカーソルが当たったとき（入力開始）Sample EditView
 //    func backViewShouldBeginEditing(_ backView: UITextView) -> Bool {
@@ -99,7 +118,7 @@ class cardPageViewController: UIViewController {
 //        return true
 //    }
 
-    
+
     
     /*
     // MARK: - Navigation
@@ -112,3 +131,4 @@ class cardPageViewController: UIViewController {
     */
 
 }
+

@@ -90,8 +90,8 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             for result: AnyObject in fetchResults {
                 let title: String? = result.value(forKey: "fileName") as? String
                 //print("newFileName:\(newFileName) Index:\(Index)().self()")
-                
-                fileList.append(title!)
+                // != ：じゃないとき
+                if title != nil {fileList.append(title!)}
             }
         } catch {
         }
