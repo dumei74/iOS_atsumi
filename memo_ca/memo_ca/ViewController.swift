@@ -34,14 +34,14 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         // DBの名前
         return fileList.count
     }
-    
+
     // 選択時に発動
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // 選択行を他メンバで使用するためにメンバ変数に保存
         selectedIndex = fileList[indexPath.row]
         performSegue(withIdentifier: "showSecondView", sender: nil)
     }
-    
+
     // Segueで画面遷移時発動
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // 次の画面のオブジェクトを作成

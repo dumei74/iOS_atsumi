@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import Photos
+import MobileCoreServices
 import CoreData
 
 class cardPageViewController: UIViewController {
-    
+
+    var scSelectedIndex = ""
+
     @IBOutlet var cardPageView: cardPageCollectionViewCell!
     
     
@@ -32,11 +36,14 @@ class cardPageViewController: UIViewController {
     @IBOutlet weak var nextBtn: UIButton!
     @IBOutlet weak var hideBtn: UIButton!
     @IBOutlet weak var backBtn: UIButton!
-
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if scSelectedIndex != ""{
+            fileName.text = scSelectedIndex
+        }
         
         print (Bundle.main)
         
@@ -63,6 +70,7 @@ class cardPageViewController: UIViewController {
         
     }
     
+
     
     // キーボードを閉じる
     func closekeyboad(sender: UIButton){
@@ -91,16 +99,55 @@ class cardPageViewController: UIViewController {
         let newRecord = NSManagedObject(entity: Index!, insertInto: viewContext)
         
         // 値のセット
+        newRecord.setValue(fileName.text, forKey: "fileName")  // 値を代入
         newRecord.setValue(frontTxt.text, forKey: "front") // 値を代入
         newRecord.setValue(backTxt.text, forKey: "back")  // 値を代入
         do {
-            // レコード（行）の即時保存
             try viewContext.save()
         } catch {
         }
 //        read()
     }
+    
+//    // Todo: 入力時のカメラ表示
+//    override func viewDidAppear(_ animated: Bool) {
+//        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary){
+//            //写真ライブラリ(カメラロール)表示用のViewControllerを宣言
+//            controller.delegate = self
+//            //新しく宣言したViewControllerでカメラとカメラロールのどちらを表示するかを指定
+//            controller.sourceType = UIImagePickerControllerSourceType.photoLibrary
+//            //トリミング
+//            controller.allowsEditing = true
+//            //新たに追加したカメラロール表示ViewControllerをpresentViewControllerにする
+//            
+//        }
+//    }
 
+    
+//    //カメラロールで写真を選んだ後
+//    func imagePickerController(_ imagePicker: UIImagePickerController,
+//                               didFinishPickingMediaWithInfo info: [String : Any]) {
+//        let assetURL:AnyObject = info[UIImagePickerControllerReferenceURL]! as AnyObject
+//        
+//        strURL = assetURL.description
+//        if strURL != ""{
+//            let url = URL(string: strURL as String!)
+//            let fetchResult: PHFetchResult = PHAsset.fetchAssets(withALAssetURLs: [url!], options: nil)
+//            let asset: PHAsset = (fetchResult.firstObject! as PHAsset)
+//            let manager: PHImageManager = PHImageManager()
+//            manager.requestImage(for: asset,targetSize: CGSize(width: 500, height: 500),contentMode: .aspectFit,options: nil) { (image, info) -> Void in
+//                self.ImgView.image = image
+//            }
+//        }
+//        
+//        //閉じる処理
+//        imagePicker.dismiss(animated: true, completion: nil)
+//    }
+    
+    
+    
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

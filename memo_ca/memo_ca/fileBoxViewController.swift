@@ -26,11 +26,11 @@ class fileBoxViewController: UIViewController {
         if scSelectedIndex != ""{
             fileName.text = scSelectedIndex
         }
-        
+
         // +new cardの読み込み
         read()
     }
-    
+
     // 既存Coreデータ読み込み
     func read() {
          let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -51,6 +51,17 @@ class fileBoxViewController: UIViewController {
         }
         cardIndex.reloadData()
     }
+    
+    
+    // Segueで画面遷移時発動
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // 次の画面のオブジェクトを作成
+        let secondVC = segue.destination as! cardPageViewController
+        // 選択された行番号を次の画面のプロパティに保存
+        secondVC.scSelectedIndex = scSelectedIndex
+    }
+
+    
     
     // 削除キー
     @IBAction func tapDelete(_ sender: UIButton) {
@@ -78,7 +89,7 @@ class fileBoxViewController: UIViewController {
     }
     // セルの表示
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Call", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Index", for: indexPath)
         
         cell.textLabel?.text = "\(indexList[indexPath.row])"
         return cell
