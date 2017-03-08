@@ -135,9 +135,9 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
 //    }
     
 //    var proArray = ["1","2","3","4"]
-    
+
+    // セルの表示
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)as! fileBoxCollectionViewCell
         

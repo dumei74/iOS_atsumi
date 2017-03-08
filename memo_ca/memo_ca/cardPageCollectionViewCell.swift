@@ -12,6 +12,7 @@ import UIKit
 
 class cardPageCollectionViewCell: UITableViewCell {
 
+    @IBOutlet weak var cardName: UILabel!
     @IBOutlet weak var seeBtn: UIButton!
     @IBOutlet weak var editBtn: UIButton!
     @IBOutlet weak var deleteBtn: UIButton!

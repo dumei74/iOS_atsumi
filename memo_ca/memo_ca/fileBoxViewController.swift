@@ -19,6 +19,13 @@ class fileBoxViewController: UIViewController {
     
     var indexList:[String] = NSArray() as! [String]
 //    var cardCIndex:[String] = NSArray() as! [String]
+    
+    // TableView行数指定
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int)-> Int{
+        // DBの名前
+        return indexList.count
+    }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +52,8 @@ class fileBoxViewController: UIViewController {
             for result: AnyObject in fetchResuls {
                 let front: String? = result.value(forKey: "front") as? String
 //                indexList.append(front!)
-                print("front:\(front)")
+//                print("front:\(front)")
+                if front != nil {indexList.append(front!)}
             }
         } catch {
         }
@@ -83,15 +91,17 @@ class fileBoxViewController: UIViewController {
         
     }
     
-    // 行数の決定
-    func tableView(_ tableView: UITableView, numberOfRowsInSection Section:Int) -> Int {
-        return indexList.count
-    }
+//    // 行数の決定
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection Section:Int) -> Int {
+//        return indexList.count
+//    }
     // セルの表示
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Index", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)as! cardPageCollectionViewCell
         
-        cell.textLabel?.text = "\(indexList[indexPath.row])"
+//        cell.textLabel?.text = "\(indexList[indexPath.row])"
+
+        cell.cardName.text = indexList[indexPath.row]
         return cell
     }
 
