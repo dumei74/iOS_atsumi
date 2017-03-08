@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class fileBoxViewController: UIViewController {
+class fileBoxViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     var scSelectedIndex = ""
 

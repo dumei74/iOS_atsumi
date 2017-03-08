@@ -31,7 +31,7 @@ class cardPageViewController: UIViewController {
     @IBOutlet weak var frontView: UIImageView!
     @IBOutlet weak var backView: UIImageView!
     
-    
+              
     
     @IBOutlet weak var nextBtn: UIButton!
     @IBOutlet weak var hideBtn: UIButton!
