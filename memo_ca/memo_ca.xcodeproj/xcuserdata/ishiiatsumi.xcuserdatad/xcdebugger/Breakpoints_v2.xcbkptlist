@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "memo_ca/fileBoxViewController.swift"
-            timestampString = "510668487.397033"
+            timestampString = "510718810.157256"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
             landmarkName = "tapDelete(_:)"
             landmarkType = "7">
          </BreakpointContent>

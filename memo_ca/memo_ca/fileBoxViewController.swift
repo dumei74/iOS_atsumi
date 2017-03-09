@@ -43,9 +43,15 @@ class fileBoxViewController: UIViewController,UITableViewDelegate,UITableViewDat
          let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
         let viewContent = appDelegate.persistentContainer.viewContext
         let query: NSFetchRequest<Index> = Index.fetchRequest()
+        
+        
+        let namePredicte = NSPredicate(format: "fileName = %@", fileName.text as! CVarArg)
+        query.predicate = namePredicte
         do {
             // 一括取得
             let fetchResuls = try viewContent.fetch(query)
+            
+            
             // 初期化
             indexList = NSArray() as! [String]
             // 取得

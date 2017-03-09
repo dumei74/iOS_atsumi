@@ -119,7 +119,8 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
                 let title: String? = result.value(forKey: "fileName") as? String
                 //print("newFileName:\(newFileName) Index:\(Index)().self()")
                 // != ：じゃないとき
-                if title != nil {fileList.append(title!)}
+                let front: String? = result.value(forKey: "front") as? String
+                if front == nil {fileList.append(title!)}
             }
         } catch {
         }
