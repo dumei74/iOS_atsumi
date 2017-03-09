@@ -23,6 +23,7 @@ class cardPageViewController: UIViewController {
     
     @IBOutlet weak var saveBtn: UIButton!
     @IBOutlet weak var commentCheck: UISwitch!
+    @IBOutlet weak var pictureCheck: UISwitch!
     
     
     @IBOutlet weak var frontTxt: UITextView!
@@ -44,6 +45,12 @@ class cardPageViewController: UIViewController {
         if scSelectedIndex != ""{
             fileName.text = scSelectedIndex
         }
+        
+//        // カメラモードの時は写真入力
+//        if pictureCheck = on {
+//            hidden; frontTxt
+//            hidden; backTxt
+//        }
         
         print (Bundle.main)
         
@@ -70,6 +77,13 @@ class cardPageViewController: UIViewController {
         
     }
     
+    @IBAction func changePictureMode(_ sender: UISwitch) {
+        if sender.isOn {
+            frontTxt.isHidden = true
+        } else {
+            frontView.isHidden = true
+        }
+    }
 
     
     // キーボードを閉じる
