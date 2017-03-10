@@ -80,8 +80,10 @@ class cardPageViewController: UIViewController {
     @IBAction func changePictureMode(_ sender: UISwitch) {
         if sender.isOn {
             frontTxt.isHidden = true
+            frontView.isHidden = false
         } else {
             frontView.isHidden = true
+            frontTxt.isHidden = false
         }
     }
 

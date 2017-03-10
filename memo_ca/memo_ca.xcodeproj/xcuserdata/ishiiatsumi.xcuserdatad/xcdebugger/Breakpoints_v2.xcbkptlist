@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "memo_ca/cardPageViewController.swift"
-            timestampString = "510724171.53226"
+            timestampString = "510800870.063276"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
             landmarkName = "tapSave(_:)"
             landmarkType = "7">
          </BreakpointContent>
