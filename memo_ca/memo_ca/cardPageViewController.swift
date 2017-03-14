@@ -168,14 +168,16 @@ class cardPageViewController: UIViewController,UIImagePickerControllerDelegate,U
         // 値のセット
         newRecord.setValue(fileName.text, forKey: "fileName")  // 値を代入
         newRecord.setValue(frontTxt.text, forKey: "front") // 値を代入
-        newRecord.setValue(frontView.image, forKey: "front")  // 値を代入
+        newRecord.setValue(strURLfront, forKey: "frontP")  // 値を代入
         newRecord.setValue(backTxt.text, forKey: "back")  // 値を代入
-        newRecord.setValue(backView.image, forKey: "back")  // 値を代入
+        newRecord.setValue(strURLback, forKey: "backP")  // 値を代入
 //        newRecord.setValue(forKey: "cardNo")  // 値を代入
         do {
             try viewContext.save()
         } catch {
         }
+        // TODO:前の画面に戻る
+        navigationController?.popViewController(animated: true)
 //        read()
     }
 
