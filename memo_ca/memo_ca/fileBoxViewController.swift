@@ -94,7 +94,6 @@ class fileBoxViewController: UIViewController,UITableViewDelegate,UITableViewDat
             read()
         } catch {
         }
-        
     }
     
 //    // 行数の決定

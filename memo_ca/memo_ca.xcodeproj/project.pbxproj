@@ -14,6 +14,7 @@
 		331D9B3A1E4D6B8E00857DB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 331D9B381E4D6B8E00857DB6 /* LaunchScreen.storyboard */; };
 		331D9B451E4D6B8E00857DB6 /* memo_caTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331D9B441E4D6B8E00857DB6 /* memo_caTests.swift */; };
 		331D9B501E4D6B8E00857DB6 /* memo_caUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331D9B4F1E4D6B8E00857DB6 /* memo_caUITests.swift */; };
+		3373604B1E76393200FC6900 /* no_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 3373604A1E76393200FC6900 /* no_image.png */; };
 		3375FFC01E50595F005F4A1E /* ELFAKYUDSC06359_TP_V.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3375FFBF1E50595F005F4A1E /* ELFAKYUDSC06359_TP_V.jpg */; };
 		339613B41E52B0BE000F23A6 /* fileBoxCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339613B31E52B0BE000F23A6 /* fileBoxCollectionViewCell.swift */; };
 		33DB1AAC1E5BC95F00292D23 /* memo-ca.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 33DB1AAA1E5BC95E00292D23 /* memo-ca.xcdatamodeld */; };
@@ -56,6 +57,7 @@
 		331D9B4B1E4D6B8E00857DB6 /* memo_caUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = memo_caUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		331D9B4F1E4D6B8E00857DB6 /* memo_caUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memo_caUITests.swift; sourceTree = "<group>"; };
 		331D9B511E4D6B8E00857DB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3373604A1E76393200FC6900 /* no_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = no_image.png; sourceTree = "<group>"; };
 		3375FFBF1E50595F005F4A1E /* ELFAKYUDSC06359_TP_V.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ELFAKYUDSC06359_TP_V.jpg; sourceTree = "<group>"; };
 		339613B31E52B0BE000F23A6 /* fileBoxCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fileBoxCollectionViewCell.swift; sourceTree = "<group>"; };
 		33DB1AAB1E5BC95E00292D23 /* memo-ca.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "memo-ca.xcdatamodel"; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				331D9B331E4D6B8E00857DB6 /* Main.storyboard */,
 				331D9B361E4D6B8E00857DB6 /* Assets.xcassets */,
 				3375FFBF1E50595F005F4A1E /* ELFAKYUDSC06359_TP_V.jpg */,
+				3373604A1E76393200FC6900 /* no_image.png */,
 				331D9B381E4D6B8E00857DB6 /* LaunchScreen.storyboard */,
 				331D9B3B1E4D6B8E00857DB6 /* Info.plist */,
 				33DB1AAA1E5BC95E00292D23 /* memo-ca.xcdatamodeld */,
@@ -263,6 +266,7 @@
 				3375FFC01E50595F005F4A1E /* ELFAKYUDSC06359_TP_V.jpg in Resources */,
 				331D9B371E4D6B8E00857DB6 /* Assets.xcassets in Resources */,
 				331D9B351E4D6B8E00857DB6 /* Main.storyboard in Resources */,
+				3373604B1E76393200FC6900 /* no_image.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

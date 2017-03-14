@@ -46,9 +46,9 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // 次の画面のオブジェクトを作成
         let secondVC = segue.destination as! fileBoxViewController
-        // 選択された行番号を次の画面のプロパティに保存
+        // 選択されたfileを次の画面のプロパティに保存
         secondVC.scSelectedIndex = selectedIndex
-        print("番号\(secondVC.scSelectedIndex)を次の画面へ渡す。")
+        print("file\(secondVC.scSelectedIndex)を次の画面へ渡す。")
     }
 
     
