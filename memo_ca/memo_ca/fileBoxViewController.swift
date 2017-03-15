@@ -12,6 +12,8 @@ import CoreData
 class fileBoxViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     var scSelectedIndex = ""
+    
+    var scSelectedIndexNumber = -1
 
     @IBOutlet weak var fileName: UILabel!
     @IBOutlet weak var cardIndex: UITableView!
@@ -70,9 +72,11 @@ class fileBoxViewController: UIViewController,UITableViewDelegate,UITableViewDat
     // Segueで画面遷移時発動
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // 次の画面のオブジェクトを作成
-        let secondVC = segue.destination as! cardPageViewController
+        let secondVC = segue.destination as! memoryViewController
         // 選択された行番号を次の画面のプロパティに保存
         secondVC.scSelectedIndex = scSelectedIndex
+        
+        secondVC.scSelectedIndexNumber = scSelectedIndexNumber
     }
 
     
@@ -110,6 +114,13 @@ class fileBoxViewController: UIViewController,UITableViewDelegate,UITableViewDat
         return cell
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        scSelectedIndexNumber = indexPath.row
+        performSegue(withIdentifier: "showSecondView", sender: nil)
+    }
+    
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

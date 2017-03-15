@@ -320,7 +320,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1425" y="757"/>
+            <point key="canvasLocation" x="588" y="809"/>
         </scene>
         <!--File Box View Controller-->
         <scene sceneID="MzJ-0p-xAt">
@@ -371,7 +371,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="See"/>
                                                     <connections>
-                                                        <segue destination="m7o-ZQ-fLp" kind="show" id="s9S-rH-JFk"/>
+                                                        <segue destination="WNg-ep-jg6" kind="show" id="das-MY-7kc"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Card Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcJ-py-kva">
@@ -476,10 +476,10 @@
             </objects>
             <point key="canvasLocation" x="-351.19999999999999" y="36.431784107946029"/>
         </scene>
-        <!--Card Page View Controller-->
+        <!--Memory View Controller-->
         <scene sceneID="ncZ-sC-I5I">
             <objects>
-                <viewController id="WNg-ep-jg6" customClass="cardPageViewController" customModule="memo_ca" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="WNg-ep-jg6" customClass="memoryViewController" customModule="memo_ca" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HSq-5v-zjm"/>
                         <viewControllerLayoutGuide type="bottom" id="TP3-bK-Ymf"/>
@@ -489,7 +489,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="ELFAKYUDSC06359_TP_V.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="kO1-75-Mrn">
-                                <rect key="frame" x="-686" y="-211" width="1600" height="1066"/>
+                                <rect key="frame" x="-686" y="-200" width="1600" height="1066"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <color key="backgroundColor" red="0.49946373700000002" green="0.94802767040000002" blue="0.11029552669999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
@@ -509,22 +509,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="no_image.png" translatesAutoresizingMaskIntoConstraints="NO" id="DhV-mT-2Nt">
-                                <rect key="frame" x="17" y="362" width="345" height="195"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.48683214190000001" green="0.91231495139999996" blue="0.78085327149999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Dj5-Qx-irk" appends="YES" id="nZG-i8-MiD"/>
-                                </connections>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WZd-Aa-BKT">
-                                <rect key="frame" x="18" y="356" width="343" height="195"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fYE-kQ-26u">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -539,16 +523,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="front" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hmz-Nb-riG">
-                                <rect key="frame" x="18" y="104" width="64" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.090191237630000004" green="0.35014355180000001" blue="0.68774998190000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="back" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zs6-9R-9u8">
-                                <rect key="frame" x="18" y="333" width="64" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="surface" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hmz-Nb-riG">
+                                <rect key="frame" x="19" y="197" width="64" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.090191237630000004" green="0.35014355180000001" blue="0.68774998190000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -571,40 +547,38 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="no_image.png" translatesAutoresizingMaskIntoConstraints="NO" id="FLg-wZ-owh">
-                                <rect key="frame" x="18" y="133" width="343" height="191"/>
+                                <rect key="frame" x="19" y="220" width="343" height="191"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.48683214190000001" green="0.91231495139999996" blue="0.78085327149999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="xYH-ha-gUi" appends="YES" id="lXg-hp-u72"/>
-                                </connections>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hyX-N4-Z20">
-                                <rect key="frame" x="18" y="127" width="343" height="191"/>
+                                <rect key="frame" x="19" y="220" width="343" height="191"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XCn-Hw-MIT">
-                                <rect key="frame" x="140" y="575" width="100" height="30"/>
+                                <rect key="frame" x="137" y="461" width="100" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.49961727857589722" green="0.94789093732833862" blue="0.0817914679646492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="( Hide )">
+                                <state key="normal" title="turn">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="tapTurn:" destination="WNg-ep-jg6" eventType="touchUpInside" id="mZt-SF-vAb"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="backTxt" destination="WZd-Aa-BKT" id="zdS-PP-HLj"/>
-                        <outlet property="backView" destination="DhV-mT-2Nt" id="uxF-aT-qCz"/>
-                        <outlet property="cardPageView" destination="mOz-99-Zgl" id="2s8-HG-Gea"/>
-                        <outlet property="fileName" destination="feB-sL-cCl" id="XyW-yS-zCx"/>
-                        <outlet property="frontTxt" destination="hyX-N4-Z20" id="v6M-dW-BDz"/>
-                        <outlet property="frontView" destination="FLg-wZ-owh" id="Oa4-4B-MvN"/>
-                        <outlet property="hideBtn" destination="XCn-Hw-MIT" id="Q7Y-Il-HrY"/>
+                        <outlet property="fileName" destination="feB-sL-cCl" id="86s-D7-I81"/>
+                        <outlet property="picture" destination="FLg-wZ-owh" id="iNh-W1-wLa"/>
+                        <outlet property="surface" destination="Hmz-Nb-riG" id="ucd-WF-euB"/>
+                        <outlet property="tapHide" destination="XCn-Hw-MIT" id="fJb-R5-oGb"/>
+                        <outlet property="word" destination="hyX-N4-Z20" id="mmD-eC-8zU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ALU-LO-wA7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -619,7 +593,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2078" y="757"/>
+            <point key="canvasLocation" x="1456.8" y="807.34632683658174"/>
         </scene>
     </scenes>
     <resources>

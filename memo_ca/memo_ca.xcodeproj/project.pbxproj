@@ -15,6 +15,7 @@
 		331D9B451E4D6B8E00857DB6 /* memo_caTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331D9B441E4D6B8E00857DB6 /* memo_caTests.swift */; };
 		331D9B501E4D6B8E00857DB6 /* memo_caUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331D9B4F1E4D6B8E00857DB6 /* memo_caUITests.swift */; };
 		3373604B1E76393200FC6900 /* no_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 3373604A1E76393200FC6900 /* no_image.png */; };
+		3373604D1E779F3F00FC6900 /* memoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3373604C1E779F3F00FC6900 /* memoryViewController.swift */; };
 		3375FFC01E50595F005F4A1E /* ELFAKYUDSC06359_TP_V.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3375FFBF1E50595F005F4A1E /* ELFAKYUDSC06359_TP_V.jpg */; };
 		339613B41E52B0BE000F23A6 /* fileBoxCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339613B31E52B0BE000F23A6 /* fileBoxCollectionViewCell.swift */; };
 		33DB1AAC1E5BC95F00292D23 /* memo-ca.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 33DB1AAA1E5BC95E00292D23 /* memo-ca.xcdatamodeld */; };
@@ -22,7 +23,6 @@
 		33DB1AB01E5BCACB00292D23 /* Index+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DB1AAE1E5BCACB00292D23 /* Index+CoreDataProperties.swift */; };
 		33DB1AB21E5BD34A00292D23 /* cardPageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DB1AB11E5BD34A00292D23 /* cardPageCollectionViewCell.swift */; };
 		33DB1AF01E5BEBA600292D23 /* cardPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DB1AEF1E5BEBA600292D23 /* cardPageViewController.swift */; };
-		33DB1AF21E5E81EC00292D23 /* quizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DB1AF11E5E81EC00292D23 /* quizViewController.swift */; };
 		33DB1AF41E5E848A00292D23 /* fileBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DB1AF31E5E848A00292D23 /* fileBoxViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +58,7 @@
 		331D9B4F1E4D6B8E00857DB6 /* memo_caUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memo_caUITests.swift; sourceTree = "<group>"; };
 		331D9B511E4D6B8E00857DB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3373604A1E76393200FC6900 /* no_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = no_image.png; sourceTree = "<group>"; };
+		3373604C1E779F3F00FC6900 /* memoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = memoryViewController.swift; sourceTree = "<group>"; };
 		3375FFBF1E50595F005F4A1E /* ELFAKYUDSC06359_TP_V.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ELFAKYUDSC06359_TP_V.jpg; sourceTree = "<group>"; };
 		339613B31E52B0BE000F23A6 /* fileBoxCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fileBoxCollectionViewCell.swift; sourceTree = "<group>"; };
 		33DB1AAB1E5BC95E00292D23 /* memo-ca.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "memo-ca.xcdatamodel"; sourceTree = "<group>"; };
@@ -65,7 +66,6 @@
 		33DB1AAE1E5BCACB00292D23 /* Index+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Index+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		33DB1AB11E5BD34A00292D23 /* cardPageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cardPageCollectionViewCell.swift; sourceTree = "<group>"; };
 		33DB1AEF1E5BEBA600292D23 /* cardPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cardPageViewController.swift; sourceTree = "<group>"; };
-		33DB1AF11E5E81EC00292D23 /* quizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = quizViewController.swift; sourceTree = "<group>"; };
 		33DB1AF31E5E848A00292D23 /* fileBoxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fileBoxViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,7 +125,7 @@
 				33DB1AF31E5E848A00292D23 /* fileBoxViewController.swift */,
 				33DB1AB11E5BD34A00292D23 /* cardPageCollectionViewCell.swift */,
 				33DB1AEF1E5BEBA600292D23 /* cardPageViewController.swift */,
-				33DB1AF11E5E81EC00292D23 /* quizViewController.swift */,
+				3373604C1E779F3F00FC6900 /* memoryViewController.swift */,
 				331D9B331E4D6B8E00857DB6 /* Main.storyboard */,
 				331D9B361E4D6B8E00857DB6 /* Assets.xcassets */,
 				3375FFBF1E50595F005F4A1E /* ELFAKYUDSC06359_TP_V.jpg */,
@@ -293,8 +293,8 @@
 			files = (
 				33DB1AB21E5BD34A00292D23 /* cardPageCollectionViewCell.swift in Sources */,
 				33DB1AAF1E5BCACB00292D23 /* Index+CoreDataClass.swift in Sources */,
-				33DB1AF21E5E81EC00292D23 /* quizViewController.swift in Sources */,
 				331D9B321E4D6B8E00857DB6 /* ViewController.swift in Sources */,
+				3373604D1E779F3F00FC6900 /* memoryViewController.swift in Sources */,
 				33DB1AF41E5E848A00292D23 /* fileBoxViewController.swift in Sources */,
 				339613B41E52B0BE000F23A6 /* fileBoxCollectionViewCell.swift in Sources */,
 				33DB1AB01E5BCACB00292D23 /* Index+CoreDataProperties.swift in Sources */,
